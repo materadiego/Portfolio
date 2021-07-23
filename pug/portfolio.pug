@@ -1,0 +1,15 @@
+include componentes/configuraciones.pug
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    link(rel="icon", href="../images/fav.png")
+    link(rel="stylesheet",href="../css/style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@400;600&display=swap", rel="stylesheet")
+    title Diego Matera Portfolio
+  body
+    include componentes/header.pug
+    .container 
+      include componentes/contenidos.pug

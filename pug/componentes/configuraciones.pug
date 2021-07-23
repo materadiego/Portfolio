@@ -1,0 +1,7 @@
+mixin caja(link,imagen,titulo,contenido) 
+  .caja
+    a(href=link, class="caja__link")
+      .caja__imagen: img(src="../images/"+imagen)
+      .caja__contenido
+        h5=titulo
+        p=contenido

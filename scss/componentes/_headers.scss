@@ -1,0 +1,102 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 20%;
+  background-color: $color-variacion;
+  @include shadow-in;
+  .logo--container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-variacion;
+    @include shadow-in;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0;
+      @include shadow-dark;
+    }
+    h1 {
+      margin: 20px 0 0;
+      color: $color-claro;
+    }
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-primario;
+    }
+  }
+  .menu {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primario;
+    @include shadow-in;
+    nav {
+      width: 80%;
+      ul {
+        padding-left: 0;
+        li {
+          margin: 5px auto;
+          width: 160px;
+          list-style: none;
+
+          a {
+            font-size: 30px;
+            padding: 0px 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            will-change: color opacity;
+            color: $color-claro;
+            border-left: 3px solid $color-secundario;
+            opacity: 0.85;
+          }
+          a:hover {
+            border-left: 3px solid $color-variacion2;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .redes {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: $color-primario;
+    @include shadow-in;
+    a {
+      width: 45px;
+      height: 45px;
+      margin: 0px 15px 40px;
+      img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        transition: 0.3s;
+        will-change: box-shadow;
+        padding: 0;
+        border: 3px solid $color-claro;
+      }
+      img:hover {
+        border: 3px solid $color-variacion2;
+        @include shadow;
+      }
+    }
+  }
+}
