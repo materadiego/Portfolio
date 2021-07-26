@@ -1,5 +1,5 @@
 .sobre-mi {
-  padding: 10px 0 25px;
+  padding: 10px 0 45px;
   margin: 25px auto 0;
   width: 100%;
   opacity: 0;
@@ -12,7 +12,6 @@
   border-top: 2px solid $color-variacion;
   border-bottom: 2px solid $color-variacion;
   @include shadow;
-
   p {
     padding: 0px 70px;
     font-size: 16px;
@@ -26,18 +25,21 @@
     display: flex;
     justify-content: flex-start;
     ul {
-      padding: 20px 40px;
-      width: 320px;
+      padding: 0 0 20px 0;
+      width: 440px;
       margin: 0 70px 0 0;
       transition: 0.3s ease-in-out;
-      border-radius: 20px;
+      border-radius: 3px;
       border: 2px solid $color-variacion;
       @include shadow;
       .title {
         display: flex;
+        padding: 15px 40px;
         align-items: center;
         margin-bottom: 15px;
+        margin-top: 0;
         border-bottom: 2px solid $color-secundario;
+        @include shadow-inner;
         img {
           width: 30px;
           margin-left: 10px;
@@ -49,9 +51,10 @@
         font-size: 16px;
         font-weight: 500;
         list-style: none;
+        padding: 5px 40px;
+        line-height: 130%;
         color: $color-claro;
         font-family: $Fuente2;
-        line-height: 130%;
       }
     }
   }

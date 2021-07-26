@@ -5,3 +5,9 @@ mixin caja(link,imagen,titulo,contenido)
       .caja__contenido
         h5=titulo
         p=contenido
+mixin caja-g(imagen,titulo,contenido) 
+  .caja
+    .caja__imagen: img(src="../images/"+imagen)
+    .caja__contenido
+      h5=titulo
+      p=contenido

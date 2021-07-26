@@ -1,109 +1,125 @@
-.hero {
-  height: 100vh;
+.landing-container {
   width: 100%;
-  padding-top: 80px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: $color-primario;
-  @include shadow-in;
-  img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 30px;
-    object-fit: cover;
-    border: 3px solid $color-secundario;
-    @include shadow-dark;
+  @include shadow-up;
+  .line {
+    display: flex;
+    width: 600px;
+    height: 30px;
+    margin: 0;
+    border: 3px solid $color-variacion;
+    background-color: $color-variacion;
+    @include shadow-in;
   }
-  .hero-title {
+  .hero {
+    height: 80vh;
+    width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 30px;
-    h2 {
-      margin: 0;
-      font-size: 30px;
-      color: $color-variacion2;
-    }
-    h1 {
-      margin: 0;
-      text-transform: capitalize;
-      font-size: 38px;
-      font-weight: 600;
-      font-family: $Fuente1;
-      color: $color-claro;
-    }
-  }
-  .go {
-    width: 250px;
-    height: 60px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 36px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 10px;
-    margin-top: 40px;
+    border-radius: 0px;
+    position: relative;
     transition: 0.3s;
-    will-change: transform;
-    font-family: $Fuente1;
-    background-color: $color-variacion;
-    border: 2px solid $color-variacion2;
-    color: $color-variacion2;
-    @include shadow-in;
-    &:hover {
-      transform: scale(1.05);
-      @include shadow-inner;
-    }
-    &:active {
-      transform: scale(1);
-      @include shadow-in;
-    }
-  }
-  .redes {
-    width: 100%;
-    height: 120px;
-    margin-top: 50px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    border-left: 3px solid $color-secundario;
+    border-bottom: 3px solid $color-secundario;
+    border-right: 3px solid $color-secundario;
     background-color: $color-primario;
-    a {
-      width: 45px;
-      height: 45px;
-      margin: 0px 15px 40px;
-      img {
+    @include shadow-up;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      margin-top: 0px;
+      transition: 0.3s;
+      object-fit: cover;
+      border: 3px solid $color-variacion;
+      @include shadow-dark;
+    }
+    .hero-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        margin: 0;
+        font-size: 22px;
+        color: $color-variacion2;
+      }
+      h1 {
+        margin: 0;
+        text-transform: capitalize;
+        font-size: 38px;
+        font-weight: 600;
+        font-family: $Fuente1;
+        color: $color-claro;
+      }
+    }
+    .go {
+      width: 250px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: 0.3s;
+      will-change: transform;
+      font-family: $Fuente1;
+      background-color: $color-variacion;
+      border: 2px solid $color-variacion2;
+      color: $color-variacion2;
+      @include shadow-in;
+      &:hover {
+        transform: scale(1.08);
+        animation: none;
+        transition: 0.3s;
+        @include shadow-inner;
+      }
+      &:active {
+        transform: scale(1);
+        @include shadow-in;
+      }
+    }
+    .redes {
+      width: 100%;
+      height: 120px;
+      margin-top: 0px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      a {
         width: 45px;
         height: 45px;
-        border-radius: 50%;
-        transition: 0.3s;
-        will-change: box-shadow;
-        padding: 0;
-        border: 3px solid $color-claro;
-      }
-      img:hover {
-        border: 3px solid $color-variacion2;
-        @include shadow;
+        margin: 0px 15px 40px;
+        img {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          transition: 0.3s;
+          will-change: box-shadow;
+          padding: 0;
+          border: 3px solid $color-claro;
+          @include shadow;
+        }
+        img:hover {
+          border: 3px solid $color-variacion2;
+          @include shadow-dark;
+        }
       }
     }
-  }
-}
-@keyframes but {
-  0% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  10% {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.01);
   }
 }

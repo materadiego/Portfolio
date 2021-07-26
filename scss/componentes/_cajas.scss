@@ -1,40 +1,65 @@
 .caja__link {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  transition: 0.2s ease-in-out;
-  will-change: background-color box-shadow;
+  transition: 0.4s;
+  will-change: color box-shadow transform border;
   width: 300px;
-  padding: 10px 10px;
-  border-radius: 10px;
+  height: 350px;
+  padding: 0px;
+  border-radius: 0px;
   overflow: hidden;
   background-color: $color-primario;
-  border: 1px solid $color-variacion;
+  border-top: 3px solid $color-secundario;
+  border-bottom: 3px solid $color-primario;
   margin: 20px 20px;
   @include shadow;
   .caja__imagen img {
-    width: 300px;
+    width: 280px;
     height: 170px;
     object-fit: cover;
-    border-radius: 10px;
-    @include shadow-dark;
+    border-radius: 3px;
+    margin-top: 10px;
   }
   .caja__contenido {
-    width: 80%;
+    width: 100%;
     text-align: center;
+    transition: 0.4s;
+    margin-bottom: 0;
+    @include shadow-inner;
     h5 {
       font-size: 26px;
-      margin: 20px 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      margin: 10px 0px 20px;
+      justify-content: center;
+      transition: 0.4s;
+      border-top: 2px solid $color-secundario;
+      border-bottom: 2px solid $color-secundario;
+      @include shadow;
     }
     p {
-      color: $color-variacion2;
+      width: 80%;
+      height: 40px;
+      margin: 0 auto 10px;
+      color: $color-claro;
+    }
+    &:hover {
+      @include shadow-in;
     }
   }
   &:hover {
-    background-color: $color-secundario;
-    border: 1px solid $color-variacion2;
+    transform: scale(1.02);
+    border-top: 3px solid $color-variacion2;
+    border-bottom: 3px solid $color-secundario;
     @include shadow-dark;
+  }
+  &:hover h5 {
+    color: $color-variacion2;
+    border-top: 2px solid $color-variacion2;
+    border-bottom: 2px solid $color-variacion2;
   }
 }
