@@ -23,7 +23,7 @@
     @include shadow-inner;
 
     @include media(desktop-s) {
-      padding: 15px 0 15px;
+      padding: 15px 0 15px 70px;
     }
   }
   p {
@@ -61,6 +61,8 @@
     }
     @include media(desktop-m) {
       width: 750px;
+
+      margin: 20px 0 20px 70px;
     }
     &--cont {
       width: 80%;
@@ -165,7 +167,7 @@
     border-bottom: 2px solid $color-variacion2;
     @include shadow-inner;
     @include media(desktop-s) {
-      padding: 15px 0;
+      padding: 15px 0 15px 70px;
     }
   }
   h4 {
@@ -175,7 +177,7 @@
     border-bottom: 3px solid $color-secundario;
     @include shadow;
     @include media(desktop-s) {
-      padding: 15px 0px;
+      padding: 10px 0px 10px 70px;
     }
   }
   &--trabajos {

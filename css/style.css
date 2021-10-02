@@ -450,7 +450,9 @@ h3 {
   color: #3dc1d3; }
   @media only screen and (min-width: 992px) {
     h3 {
-      margin: 10px 0 5px; } }
+      margin: 10px 0 5px;
+      text-align: start;
+      padding-left: 70px; } }
 
 h4 {
   font-size: 18px;
@@ -461,6 +463,9 @@ h4 {
   @media only screen and (min-width: 380px) {
     h4 {
       font-size: 22px; } }
+  @media only screen and (min-width: 992px) {
+    h4 {
+      text-align: start; } }
 
 .container {
   width: 100%;
@@ -805,7 +810,7 @@ h4 {
       margin-left: 0; } }
   @media only screen and (min-width: 1200px) {
     .header {
-      width: 30%; } }
+      width: 25%; } }
   .header .logo--container {
     height: 220px;
     width: 100%;
@@ -1006,7 +1011,7 @@ h4 {
     box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.7); }
     @media only screen and (min-width: 992px) {
       .sobre-mi #about-me {
-        padding: 15px 0 15px; } }
+        padding: 15px 0 15px 70px; } }
   .sobre-mi p {
     font-size: 14px;
     width: 70%;
@@ -1049,7 +1054,8 @@ h4 {
         justify-content: space-evenly; } }
     @media only screen and (min-width: 1200px) {
       .sobre-mi .skills {
-        width: 750px; } }
+        width: 750px;
+        margin: 20px 0 20px 70px; } }
     .sobre-mi .skills--cont {
       width: 80%;
       padding: 0;
@@ -1168,7 +1174,7 @@ h4 {
     box-shadow: inset 0px 0px 20px 5px rgba(0, 0, 0, 0.7); }
     @media only screen and (min-width: 992px) {
       .portfolio h3 {
-        padding: 15px 0; } }
+        padding: 15px 0 15px 70px; } }
   .portfolio h4 {
     font-size: 28px;
     margin-top: 15px;
@@ -1178,7 +1184,7 @@ h4 {
     box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.55); }
     @media only screen and (min-width: 992px) {
       .portfolio h4 {
-        padding: 15px 0px; } }
+        padding: 10px 0px 10px 70px; } }
   .portfolio--trabajos {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
