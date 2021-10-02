@@ -8,8 +8,15 @@ html
     link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@400;600&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="https://unpkg.com/swiper@7/swiper-bundle.min.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     title Diego Matera Portfolio
   body
     include componentes/header.pug
     .container 
       include componentes/contenidos.pug
+    script(src="https://unpkg.com/swiper@7/swiper-bundle.min.js")
+    script(src="../js/swiper.js")
+    script(src="../js/skills.js")  
+    script(src="../js/menu.js")  
+

@@ -2,27 +2,40 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  min-height: 530px;
   flex-wrap: wrap;
   position: relative;
   align-items: center;
   justify-content: center;
   background-color: $color-primario;
   @include shadow-up;
+  @include media(mobile-l) {
+    min-height: 618px;
+  }
+  @include media(tablet) {
+  }
+  @include media(desktop-s) {
+    flex-direction: column;
+  }
   .line {
     display: flex;
-    width: 600px;
-    height: 30px;
+    width: 100%;
+    height: 3vh;
     margin: 0;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border: 3px solid $color-variacion;
     background-color: $color-variacion;
     @include shadow-in;
+    @include media(desktop-s) {
+      height: 30px;
+      width: 600px;
+    }
   }
   .hero {
-    height: 80vh;
-    width: 600px;
+    height: 97vh;
+    width: 100%;
+    min-width: 320px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -35,10 +48,19 @@
     border-bottom: 3px solid $color-secundario;
     border-right: 3px solid $color-secundario;
     background-color: $color-primario;
+
+    min-height: 510px;
     @include shadow-up;
+    @include media(mobile-l) {
+      min-height: 600px;
+    }
+    @include media(desktop-s) {
+      height: 80vh;
+      width: 600px;
+    }
     img {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       margin-bottom: 20px;
       margin-top: 0px;
@@ -46,6 +68,18 @@
       object-fit: cover;
       border: 3px solid $color-variacion;
       @include shadow-dark;
+      @include media(mobile-l) {
+        width: 170px;
+        height: 170px;
+      }
+      @include media(mobile-xl) {
+        width: 190px;
+        height: 190px;
+      }
+      @include media(desktop-s) {
+        width: 200px;
+        height: 200px;
+      }
     }
     .hero-title {
       display: flex;
@@ -53,31 +87,48 @@
       align-items: center;
       h2 {
         margin: 0;
-        font-size: 22px;
+        font-size: 1.4em;
+        text-align: center;
         color: $color-variacion2;
+        @include media(mobile-l) {
+          font-size: 1.6em;
+        }
+        @include media(mobile-xl) {
+          font-size: 1.8em;
+        }
+        @include media(desktop-s) {
+          font-size: 1.375em;
+        }
       }
       h1 {
         margin: 0;
         text-transform: capitalize;
-        font-size: 38px;
+        font-size: 2em;
         font-weight: 600;
+        text-align: center;
         font-family: $Fuente1;
         color: $color-claro;
+        @include media(mobile-l) {
+          font-size: 2.2em;
+        }
+        @include media(desktop-s) {
+          font-size: 2.375em;
+        }
       }
     }
     .go {
-      width: 250px;
-      height: 60px;
+      width: 170px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 36px;
+      font-size: 2.25em;
       text-transform: uppercase;
       text-decoration: none;
       font-weight: 600;
       letter-spacing: 1px;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 15px;
       transition: 0.3s;
       will-change: transform;
       font-family: $Fuente1;
@@ -85,6 +136,19 @@
       border: 2px solid $color-variacion2;
       color: $color-variacion2;
       @include shadow-in;
+      @include media(mobile-l) {
+        font-size: 2.4em;
+        width: 200px;
+        height: 60px;
+      }
+      @include media(mobile-xl) {
+        font-size: 2.6em;
+      }
+      @include media(desktop-s) {
+        width: 250px;
+        height: 60px;
+        margin-top: 20px;
+      }
       &:hover {
         transform: scale(1.08);
         animation: none;
@@ -98,15 +162,24 @@
     }
     .redes {
       width: 100%;
-      height: 120px;
+      height: 90px;
       margin-top: 0px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      @include media(desktop-s) {
+        height: 120px;
+      }
       a {
         width: 45px;
         height: 45px;
-        margin: 0px 15px 40px;
+        margin: 0px 15px 20px;
+        @include media(mobile-xl) {
+          margin: 0px 20px 20px;
+        }
+        @include media(desktop-s) {
+          margin: 0px 15px 40px;
+        }
         img {
           width: 45px;
           height: 45px;
@@ -116,6 +189,14 @@
           padding: 0;
           border: 3px solid $color-claro;
           @include shadow;
+          @include media(mobile-l) {
+            width: 55px;
+            height: 55px;
+          }
+          @include media(desktop-s) {
+            width: 45px;
+            height: 45px;
+          }
         }
         img:hover {
           border: 3px solid $color-variacion2;

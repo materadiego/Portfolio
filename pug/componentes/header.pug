@@ -1,4 +1,7 @@
-header
+header.header
+
+  .xmenu-but.mob#xmenu-but   
+    img(src="../images/Responsive-xmenu.png", alt="")
   .logo--container
     img.logo(src="../images/avatarbn.jpg", alt="")
     h1 Diego Matera
@@ -7,11 +10,11 @@ header
     nav
       ul
         li
-          a(href="#about-me")  About me
+          a(href="#about-me", id="about")  About me
         li
-          a(href="#developed")  Developed
+          a(href="#developed", id="dev")  Developed
         li
-          a(href="#projects")  Projects
+          a(href="#projects", id="proj")  Projects
   .redes
     a(href="https://github.com/materadiego", target="_blank")
       img(src="../images/gitb.png", alt="GitHub")

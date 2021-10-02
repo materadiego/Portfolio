@@ -1,6 +1,4 @@
 .sobre-mi {
-  padding: 0px 0 45px;
-  margin: 25px auto 0;
   width: 100%;
   opacity: 0;
   animation-name: carga;
@@ -9,60 +7,137 @@
   animation-fill-mode: forwards;
   animation-duration: 2s;
   background-color: $color-primario;
-  border-top: 2px solid $color-variacion;
-  border-bottom: 2px solid $color-variacion;
-  @include shadow;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid $color-oscuro;
+  @include shadow-inner;
+  @include media(desktop-s) {
+    width: 100%;
+    padding: 0px 0 45px;
+    margin: 25px auto 0;
+  }
   #about-me {
     margin: 15px 0 20px;
-    padding: 15px 0 15px 70px;
     border-top: 2px solid $color-secundario;
     border-bottom: 2px solid $color-secundario;
     @include shadow-inner;
+
+    @include media(desktop-s) {
+      padding: 15px 0 15px;
+    }
   }
   p {
-    padding: 0px 70px;
-    font-size: 16px;
-    margin: 1px 0 0;
+    font-size: 14px;
+    width: 70%;
+    margin: 10px auto;
     line-height: 150%;
     font-family: $Fuente2;
+    @include media(mobile-l) {
+      font-size: 16px;
+    }
+    @include media(desktop-s) {
+      padding: 0px 70px;
+      margin: 1px 0 0;
+      font-size: 16px;
+      width: 100%;
+    }
   }
   .skills {
-    padding-left: 70px;
     margin-top: 20px;
+    align-items: flex-start;
+    width: 100%;
     display: flex;
+
+    flex-wrap: wrap;
     justify-content: flex-start;
-    ul {
-      padding: 0 0 20px 0;
-      width: 440px;
-      margin: 0 70px 0 0;
+    @include media(mobile-xl) {
+      width: 70%;
+      margin: 20px auto;
+    }
+    @include media(desktop-s) {
+      padding-left: 0;
+      width: 100%;
+      justify-content: space-evenly;
+    }
+    @include media(desktop-m) {
+      width: 750px;
+    }
+    &--cont {
+      width: 80%;
+      padding: 0;
+      margin: 0 auto 20px;
       transition: 0.3s ease-in-out;
       border-radius: 3px;
-      border: 2px solid $color-variacion;
+      transition: 0.3s;
       background: $color-oscuro;
       @include shadow;
-      .title {
+      @include media(mobile-xl) {
+        width: 100%;
+      }
+      @include media(desktop-s) {
+        width: 440px;
+        margin: 0;
+        padding: 0;
+        width: 290px;
+      }
+      @include media(desktop-m) {
+        width: 320px;
+      }
+      &--title {
         display: flex;
-        padding: 15px 40px;
+        justify-content: center;
         align-items: center;
         margin-bottom: 15px;
         margin-top: 0;
+        padding: 5px 0;
+        position: relative;
+        cursor: pointer;
         border-bottom: 2px solid $color-secundario;
         @include shadow-inner;
-        img {
-          width: 30px;
+        @include media(desktop-s) {
+          padding: 15px 40px;
+          margin-bottom: 0;
+        }
+        & h4 {
+          transition: 0.3s;
+        }
+        & img {
+          width: 15px;
           margin-left: 10px;
-          margin-bottom: 5px;
+          margin-bottom: 0px;
+          position: absolute;
+          right: 15px;
         }
       }
-      li {
-        padding-left: 0px;
-        font-size: 16px;
-        font-weight: 500;
-        list-style: none;
-        padding: 5px 40px;
-        line-height: 130%;
-        color: $color-claro;
-        font-family: $Fuente2;
+      &--ul {
+        flex-direction: column;
+        align-items: center;
+
+        padding: 0;
+        & li {
+          font-size: 14px;
+          font-weight: 500;
+          list-style: none;
+
+          width: 100%;
+          margin: 7px 0;
+          line-height: 130%;
+          text-align: center;
+          color: $color-claro;
+          font-family: $Fuente2;
+          @include media(mobile-l) {
+            font-size: 16px;
+          }
+          @include media(desktop-s) {
+            padding: 5px 40px;
+            font-size: 16px;
+          }
+        }
+      }
+      &:hover .skills--cont--title h4 {
+        @include media(desktop-s) {
+          color: $color-variacion2;
+        }
       }
     }
   }
@@ -70,8 +145,9 @@
 
 .portfolio {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   opacity: 0;
+  padding-bottom: 30px;
   animation-name: carga;
   animation-delay: 1.3s;
   animation-timing-function: ease-in;
@@ -79,36 +155,107 @@
   animation-duration: 2s;
   color: $color-variacion2;
   @include shadow-inner;
+  @include media(desktop-s) {
+    width: 100%;
+    margin: 0 auto;
+  }
   h3 {
     margin-top: 25px;
-    padding: 20px 0 20px 70px;
     border-top: 2px solid $color-variacion2;
     border-bottom: 2px solid $color-variacion2;
     @include shadow-inner;
+    @include media(desktop-s) {
+      padding: 15px 0;
+    }
   }
   h4 {
-    padding: 15px 0px 15px 70px;
     font-size: 28px;
     margin-top: 15px;
     border-top: 3px solid $color-secundario;
     border-bottom: 3px solid $color-secundario;
     @include shadow;
+    @include media(desktop-s) {
+      padding: 15px 0px;
+    }
   }
   &--trabajos {
-    display: flex;
     flex-wrap: wrap;
+    position: relative;
     justify-content: center;
-    width: 90%;
-    padding: 30px 0;
-    margin: 20px auto;
+    width: 100%;
+    @include media(mobile-l) {
+      width: 70%;
+    }
+    @include media(tablet) {
+      width: 100%;
+      padding: 30px 0;
+    }
+    @include media(desktop-s) {
+      margin: 20px auto;
+      padding: 30px 0;
+    }
   }
   &--proyectos {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    padding: 30px 0 30px 0px;
+    padding: 30px 0;
+    @include media(mobile-l) {
+      width: 70%;
+    }
+    @include media(tablet) {
+      width: 100%;
+      padding: 30px 0;
+    }
   }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  transform: scale(0.6);
+  position: absolute;
+  left: 0px;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: $color-variacion2;
+}
+.swiper-button-next {
+  transform: scale(0.6);
+}
+
+.ul-front,
+.ul-a-l {
+  display: none;
+}
+
+.title-f {
+  color: $color-variacion;
+}
+
+.flecha-f {
+  transform: rotateZ(0deg);
+  transition: 0.3s;
+}
+
+.skills--cont {
+  border: 3px solid $color-primario;
+}
+
+.ul-active {
+  display: flex;
+}
+
+.flecha-is-active {
+  transform: rotateZ(-180deg);
+}
+
+.title-is-active {
+  color: $color-variacion2;
 }

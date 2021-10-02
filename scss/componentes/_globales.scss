@@ -32,18 +32,34 @@ $Fuente2: "Cairo", sans-serif;
 
 * {
   scroll-behavior: smooth;
+
   font-family: $Fuente1;
   color: $color-claro;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
+  min-height: 540px;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  position: relative;
   will-change: opacity;
   animation-name: carga;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
   animation-duration: 1s;
+  font-size: 12px;
+  overflow: hidden;
+
+  @include media(mobile-l) {
+    font-size: 14px;
+  }
+  @include media(desktop-s) {
+    font-size: 16px;
+    flex-direction: row;
+  }
 }
 
 @keyframes carga {
@@ -74,23 +90,76 @@ h4 {
 
 h3 {
   font-size: 34px;
-  margin: 10px 0 5px;
-  padding-left: 70px;
+  margin: 5px 0 5px;
+  text-align: center;
   color: $color-variacion2;
+  @include media(desktop-s) {
+    margin: 10px 0 5px;
+  }
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0;
   padding: 0px;
+  text-align: center;
   color: $color-variacion;
+  @include media(mobile-l) {
+    font-size: 22px;
+  }
+  @include media(desktop-s) {
+  }
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   height: 100vh;
   overflow: auto;
   margin-bottom: 0;
   padding-bottom: 0;
+  position: relative;
   background-color: $color-primario;
+  @include shadow-in();
+  @include media(desktop-s) {
+    width: 80%;
+  }
+}
+
+.menu-but {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  top: 28px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  & img {
+    width: 100%;
+  }
+}
+
+.xmenu-but {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  right: 25px;
+  top: 28px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  & img {
+    width: 100%;
+  }
+}
+
+.desk {
+  display: none;
+  @include media(tablet) {
+    display: flex;
+  }
+}
+
+.mob {
+  @include media(tablet) {
+    display: none;
+  }
 }

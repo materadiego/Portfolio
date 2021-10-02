@@ -7,10 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&amp;family=Cairo:wght@400;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Diego Matera Portfolio</title>
   </head>
   <body>
-    <header>
+    <header class="header">
+      <div class="xmenu-but mob" id="xmenu-but">  <img src="../images/Responsive-xmenu.png" alt=""></div>
       <div class="logo--container"><img class="logo" src="../images/avatarbn.jpg" alt="">
         <h1>Diego Matera</h1>
         <h2>frontend developer</h2>
@@ -18,15 +21,16 @@
       <div class="menu">
         <nav>
           <ul>
-            <li><a href="#about-me"> About me</a></li>
-            <li><a href="#developed"> Developed</a></li>
-            <li><a href="#projects"> Projects</a></li>
+            <li><a href="#about-me" id="about"> About me</a></li>
+            <li><a href="#developed" id="dev"> Developed</a></li>
+            <li><a href="#projects" id="proj"> Projects</a></li>
           </ul>
         </nav>
       </div>
       <div class="redes"><a href="https://github.com/materadiego" target="_blank"><img src="../images/gitb.png" alt="GitHub"></a><a href="https://www.linkedin.com/in/diego-matera/" target="_blank"><img src="../images/in.png" alt="LinkedIn"></a><a href="https://soundcloud.com/diego-matera" target="_blank"><img src="../images/sc.png" alt="Soundcloud"></a></div>
     </header>
     <div class="container"> 
+      <div class="menu-but mob" id="menu-but"> <img src="../images/Responsive-menu.png" alt=""></div>
       <section class="sobre-mi">
         <h3 id="about-me">About Me</h3>
         <p> Born in Buenos Aires, Argentina in the early 90's. I've always been a proactive guy, constantly learning an improving my skills.</p>
@@ -36,38 +40,105 @@
         <p> Sport lover, Musical Producer & Minimal House DJ.</p>
         <h3>Skills </h3>
         <div class="skills"> 
-          <ul> 
-            <div class="title"> 
-              <h4>FRONTEND DEVELOPER</h4><img src="../images/frontend.png" alt="icon">
+          <div class="skills--cont" id="skills-front">
+            <div class="skills--cont--title" id="title-f">
+              <h4 class="title-f">FRONTEND DEVELOPER</h4><img class="flecha-f" src="../images/flecha.png" alt="">
             </div>
-            <li>- HTML (HTML 5, pug)</li>
-            <li>- CSS (Flexbox, CSS Grid, Animations, Sass) </li>
-            <li>- Responsive Design </li>
-            <li>- Javascript</li>
-            <li>- GitHub </li>
-            <li>- PHP (basic)</li>
-            <li>- Photoshop (basic)</li>
-          </ul>
-          <ul> 
-            <div class="title">
-              <h4> AUDIO & LIGHTING TECHNICIAN</h4><img src="../images/tech.png" alt="">
+            <ul class="skills--cont--ul ul-front"> 
+              <li>HTML (HTML 5, pug)</li>
+              <li>CSS</li>
+              <li>Preprocessors </li>
+              <li>Responsive Design </li>
+              <li>Javascript</li>
+              <li>GitHub </li>
+              <li>Webpack</li>
+              <li>React.js</li>
+              <li>PHP (basic)</li>
+              <li>Photoshop (basic)</li>
+            </ul>
+          </div>
+          <div class="skills--cont" id="skills-a-l"> 
+            <div class="skills--cont--title" id="title-a-l">
+              <h4 class="title-a-l"> AUDIO & LIGHTING</h4><img class="flecha-a-l" src="../images/flecha.png" alt="">
             </div>
-            <li>- Audio DAWs (Protools, Cubase, Ableton Live) </li>
-            <li>- Professional Recording, Mixing & Mastering</li>
-            <li>- Beatmaker</li>
-            <li>- Live Audio Operator </li>
-            <li>- DMX Lighting Operator (Avolites)</li>
-          </ul>
+            <ul class="skills--cont--ul ul-a-l"> 
+              <li> Audio DAWs (Protools, Cubase, Ableton Live) </li>
+              <li> Professional Recording, Mixing & Mastering</li>
+              <li> Beatmaker</li>
+              <li> Live Audio Operator </li>
+              <li> DMX Lighting Operator (Avolites)</li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="portfolio">
         <h3>Portfolio</h3>
-        <h4 id="developed">DEVELOPED WORK</h4>
-        <div class="portfolio--trabajos">
+        <h4 id="developed">DEVELOPMENTS</h4>
+        <div class="portfolio--trabajos swiper mySwiper mob">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/madero-tango-eventos/">
+                  <div class="caja__imagen"><img src="../images/tango.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Madero Tango</h5>
+                    <p>Frontend Development using HTML, SASS &amp; JavaScript.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/cocinas-marketplace/">
+                  <div class="caja__imagen"><img src="../images/cocinas-m.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Marketplace C.Ocultas</h5>
+                    <p>Frontend Development using HTML, SASS &amp; JavaScript.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://www.cocinasocultas.com.uy/">
+                  <div class="caja__imagen"><img src="../images/cocinas.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Cocinas Ocultas</h5>
+                    <p>Frontend Development using HTML, CSS, JavaScript &amp; PHP.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://www.cascanuecesarg.com">
+                  <div class="caja__imagen"><img src="../images/cascanueces.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Cascanueces</h5>
+                    <p>Frontend Development using HTML, CSS, JavaScript &amp; PHP.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://www.pinkinton.com/">
+                  <div class="caja__imagen"><img src="../images/pinkinton.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Pinkinton</h5>
+                    <p>Frontend Development using HTML, CSS, JavaScript &amp; PHP.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/raiconet/">
+                  <div class="caja__imagen"><img src="../images/raiconet.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Raiconet</h5>
+                    <p>Frontend Development using HTML, CSS, JavaScript &amp; PHP.</p>
+                  </div></a></div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="portfolio--trabajos desk">
           <div class="caja"><a class="caja__link" href="https://materadiego.github.io/madero-tango-eventos/">
               <div class="caja__imagen"><img src="../images/tango.png"/></div>
               <div class="caja__contenido">
                 <h5>Madero Tango</h5>
+                <p>Frontend Development using HTML, SASS &amp; JavaScript.</p>
+              </div></a></div>
+          <div class="caja"><a class="caja__link" href="https://materadiego.github.io/cocinas-marketplace/">
+              <div class="caja__imagen"><img src="../images/cocinas-m.png"/></div>
+              <div class="caja__contenido">
+                <h5>Marketplace C.Ocultas</h5>
                 <p>Frontend Development using HTML, SASS &amp; JavaScript.</p>
               </div></a></div>
           <div class="caja"><a class="caja__link" href="https://www.cocinasocultas.com.uy/">
@@ -96,7 +167,53 @@
               </div></a></div>
         </div>
         <h4 id="projects">PROJECTS</h4>
-        <div class="portfolio--proyectos">
+        <div class="portfolio--proyectos swiper mySwiper mob">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> 
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/layout-curso/">
+                  <div class="caja__imagen"><img src="../images/landing.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Landing page - CSS Grid</h5>
+                    <p>Landing page using css grid layout &amp; HTML.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/prueba-animacion-css/">
+                  <div class="caja__imagen"><img src="../images/kombi.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>CSS Animation</h5>
+                    <p>Animation made for fun after finishing CSS animation course.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/transiciones-css/">
+                  <div class="caja__imagen"><img src="../images/transiciones.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>CSS Transitions</h5>
+                    <p>Project developed during CSS animation course.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/prueba-calculos-javascript/">
+                  <div class="caja__imagen"><img src="../images/figuras.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>JavaScript Calc</h5>
+                    <p>Calculating geometric figures.</p>
+                  </div></a></div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="caja"><a class="caja__link" href="https://materadiego.github.io/interest-prueba-css/">
+                  <div class="caja__imagen"><img src="../images/interest.png"/></div>
+                  <div class="caja__contenido">
+                    <h5>Interest</h5>
+                    <p>Pinterest Layout using CSS Grid Layout.</p>
+                  </div></a></div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="portfolio--proyectos desk">
           <div class="caja"><a class="caja__link" href="https://materadiego.github.io/layout-curso/">
               <div class="caja__imagen"><img src="../images/landing.png"/></div>
               <div class="caja__contenido">
@@ -127,14 +244,12 @@
                 <h5>Interest</h5>
                 <p>Pinterest Layout using CSS Grid Layout.</p>
               </div></a></div>
-          <div class="caja"><a class="caja__link" href="https://materadiego.github.io/interest-prueba-css/">
-              <div class="caja__imagen"><img src="../images/interest.png"/></div>
-              <div class="caja__contenido">
-                <h5>Interest</h5>
-                <p>Pinterest Layout using CSS Grid Layout.</p>
-              </div></a></div>
         </div>
       </section>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/skills.js"> </script>
+    <script src="../js/menu.js"> </script>
   </body>
 </html>

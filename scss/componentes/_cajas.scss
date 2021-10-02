@@ -6,7 +6,7 @@
   text-decoration: none;
   transition: 0.4s;
   will-change: color box-shadow transform border;
-  width: 300px;
+  width: 220px;
   height: 350px;
   padding: 0px;
   border-radius: 0px;
@@ -16,6 +16,18 @@
   border-bottom: 3px solid $color-primario;
   margin: 20px 20px;
   @include shadow;
+  @include media(mobile-l) {
+    width: 250px;
+  }
+  @include media(mobile-xl) {
+    width: 300px;
+  }
+  @include media(desktop-s) {
+    width: 270px;
+  }
+  @include media(desktop-m) {
+    width: 300px;
+  }
   .caja__imagen img {
     width: 280px;
     height: 170px;
@@ -28,23 +40,32 @@
     text-align: center;
     transition: 0.4s;
     margin-bottom: 0;
+    padding-bottom: 10px;
+
     @include shadow-inner;
-    h5 {
-      font-size: 26px;
+    & h5 {
+      font-size: 22px;
       height: 60px;
       display: flex;
       align-items: center;
-      margin: 10px 0px 20px;
+      margin: 10px 0px 10px;
       justify-content: center;
       transition: 0.4s;
       border-top: 2px solid $color-secundario;
       border-bottom: 2px solid $color-secundario;
       @include shadow;
+      @include media(mobile-l) {
+        font-size: 24px;
+      }
+      @include media(mobile-xl) {
+        font-size: 26px;
+      }
     }
-    p {
+    & p {
       width: 80%;
       height: 40px;
       margin: 0 auto 10px;
+
       color: $color-claro;
     }
     &:hover {
@@ -53,12 +74,14 @@
   }
   &:hover {
     transform: scale(1.02);
+    text-decoration: none;
     border-top: 3px solid $color-variacion2;
     border-bottom: 3px solid $color-secundario;
     @include shadow-dark;
   }
   &:hover h5 {
     color: $color-variacion2;
+
     border-top: 2px solid $color-variacion2;
     border-bottom: 2px solid $color-variacion2;
   }

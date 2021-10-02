@@ -1,3 +1,5 @@
+.menu-but.mob#menu-but 
+  img(src="../images/Responsive-menu.png", alt="")
 section.sobre-mi
   h3#about-me About Me
   p  Born in Buenos Aires, Argentina in the early 90's. I've always been a proactive guy, constantly learning an improving my skills.
@@ -7,40 +9,76 @@ section.sobre-mi
   p  Sport lover, Musical Producer & Minimal House DJ.
   h3 Skills 
   .skills 
-    ul 
-      .title 
-        h4 FRONTEND DEVELOPER
-        img(src="../images/frontend.png", alt="icon")
-      li - HTML (HTML 5, pug)
-      li - CSS (Flexbox, CSS Grid, Animations, Sass) 
-      li - Responsive Design 
-      li - Javascript
-      li - GitHub 
-      li - PHP (basic)
-      li - Photoshop (basic)
-    ul 
-      .title
-        h4  AUDIO & LIGHTING TECHNICIAN
-        img(src="../images/tech.png", alt="")
-      li - Audio DAWs (Protools, Cubase, Ableton Live) 
-      li - Professional Recording, Mixing & Mastering
-      li - Beatmaker
-      li - Live Audio Operator 
-      li - DMX Lighting Operator (Avolites)
+    .skills--cont#skills-front
+      .skills--cont--title#title-f
+        h4.title-f FRONTEND DEVELOPER
+        img(src="../images/flecha.png", alt="", class="flecha-f")
+      ul.skills--cont--ul.ul-front  
+        li HTML (HTML 5, pug)
+        li CSS
+        li Preprocessors 
+        li Responsive Design 
+        li Javascript
+        li GitHub 
+        li Webpack
+        li React.js
+        li PHP (basic)
+        li Photoshop (basic)
+    .skills--cont#skills-a-l 
+      .skills--cont--title#title-a-l
+        h4.title-a-l  AUDIO & LIGHTING
+        img(src="../images/flecha.png", alt="", class="flecha-a-l")
+      ul.skills--cont--ul.ul-a-l  
+        li  Audio DAWs (Protools, Cubase, Ableton Live) 
+        li  Professional Recording, Mixing & Mastering
+        li  Beatmaker
+        li  Live Audio Operator 
+        li  DMX Lighting Operator (Avolites)
 section.portfolio
   h3 Portfolio
-  h4#developed DEVELOPED WORK
-  div.portfolio--trabajos
+  h4#developed DEVELOPMENTS
+  .portfolio--trabajos.swiper.mySwiper.mob
+    .swiper-wrapper
+      .swiper-slide
+        +caja('https://materadiego.github.io/madero-tango-eventos/', 'tango.png', 'Madero Tango', 'Frontend Development using HTML, SASS & JavaScript.')
+      .swiper-slide
+        +caja('https://materadiego.github.io/cocinas-marketplace/', 'cocinas-m.png', 'Marketplace C.Ocultas', 'Frontend Development using HTML, SASS & JavaScript.')
+      .swiper-slide
+        +caja('https://www.cocinasocultas.com.uy/', 'cocinas.png', 'Cocinas Ocultas', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+      .swiper-slide
+        +caja('https://www.cascanuecesarg.com', 'cascanueces.png', 'Cascanueces', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+      .swiper-slide
+        +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+      .swiper-slide
+        +caja('https://materadiego.github.io/raiconet/', 'raiconet.png', 'Raiconet', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+    .swiper-button-next
+    .swiper-button-prev
+  div.portfolio--trabajos.desk
     +caja('https://materadiego.github.io/madero-tango-eventos/', 'tango.png', 'Madero Tango', 'Frontend Development using HTML, SASS & JavaScript.')
+    +caja('https://materadiego.github.io/cocinas-marketplace/', 'cocinas-m.png', 'Marketplace C.Ocultas', 'Frontend Development using HTML, SASS & JavaScript.')
     +caja('https://www.cocinasocultas.com.uy/', 'cocinas.png', 'Cocinas Ocultas', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
     +caja('https://www.cascanuecesarg.com', 'cascanueces.png', 'Cascanueces', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
     +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
     +caja('https://materadiego.github.io/raiconet/', 'raiconet.png', 'Raiconet', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
   h4#projects PROJECTS
-  div.portfolio--proyectos
+  .portfolio--proyectos.swiper.mySwiper.mob
+    .swiper-wrapper
+      .swiper-slide 
+        +caja('https://materadiego.github.io/layout-curso/','landing.png','Landing page - CSS Grid','Landing page using css grid layout & HTML.')
+      .swiper-slide 
+        +caja('https://materadiego.github.io/prueba-animacion-css/','kombi.png', 'CSS Animation','Animation made for fun after finishing CSS animation course.')
+      .swiper-slide 
+        +caja('https://materadiego.github.io/transiciones-css/','transiciones.png','CSS Transitions','Project developed during CSS animation course.')
+      .swiper-slide 
+        +caja('https://materadiego.github.io/prueba-calculos-javascript/','figuras.png','JavaScript Calc','Calculating geometric figures.')
+      .swiper-slide 
+        +caja('https://materadiego.github.io/interest-prueba-css/','interest.png','Interest','Pinterest Layout using CSS Grid Layout.')
+      
+    .swiper-button-next
+    .swiper-button-prev
+  div.portfolio--proyectos.desk
     +caja('https://materadiego.github.io/layout-curso/','landing.png','Landing page - CSS Grid','Landing page using css grid layout & HTML.')
     +caja('https://materadiego.github.io/prueba-animacion-css/','kombi.png', 'CSS Animation','Animation made for fun after finishing CSS animation course.')
     +caja('https://materadiego.github.io/transiciones-css/','transiciones.png','CSS Transitions','Project developed during CSS animation course.')
     +caja('https://materadiego.github.io/prueba-calculos-javascript/','figuras.png','JavaScript Calc','Calculating geometric figures.')
-    +caja('https://materadiego.github.io/interest-prueba-css/','interest.png','Interest','Pinterest Layout using CSS Grid Layout.')
     +caja('https://materadiego.github.io/interest-prueba-css/','interest.png','Interest','Pinterest Layout using CSS Grid Layout.')
