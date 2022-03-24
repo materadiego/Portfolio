@@ -182,7 +182,7 @@
     margin-top: 15px;
     border-top: 3px solid $color-secundario;
     border-bottom: 3px solid $color-secundario;
-    @include shadow;
+    @include shadow-inner;
     @include media(desktop-s) {
       padding: 10px 0px 10px 70px;
     }

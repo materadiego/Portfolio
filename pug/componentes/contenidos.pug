@@ -21,6 +21,7 @@ section.sobre-mi
         li Javascript
         li GitHub 
         li Webpack
+        li React.JS (In course)
         li PHP (basic)
         li Photoshop (basic)
     .skills--cont#skills-a-l 
@@ -39,6 +40,8 @@ section.portfolio
   .portfolio--trabajos.swiper.mySwiper.mob
     .swiper-wrapper
       .swiper-slide
+        +caja('http://tuespaciointeriores.com/', 'tu-espacio.png', 'Tu Espacio Interioes', 'Frontend Development Wordpress(Divi Theme)')
+      .swiper-slide
         +caja('https://materadiego.github.io/IAF/', 'iaf.png', 'Instituto Alejandro Fleming', 'Frontend Development using HTML, SASS & JavaScript.')
       .swiper-slide
         +caja('https://materadiego.github.io/madero-tango-eventos/', 'tango.png', 'Madero Tango', 'Frontend Development using HTML, SASS & JavaScript.')
@@ -49,16 +52,17 @@ section.portfolio
       .swiper-slide
         +caja('https://www.cascanuecesarg.com', 'cascanueces.png', 'Cascanueces', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
       .swiper-slide
-        +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+        //- +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
     .swiper-button-next
     .swiper-button-prev
   div.portfolio--trabajos.desk
+    +caja('http://tuespaciointeriores.com/', 'tu-espacio.png', 'Tu Espacio Interioes', 'Frontend Development using Wordpress (Divi Theme)')
     +caja('https://materadiego.github.io/IAF/', 'iaf.png', 'Instituto Alejandro Fleming', 'Frontend Development using HTML, SASS & JavaScript.')
     +caja('https://materadiego.github.io/madero-tango-eventos/', 'tango.png', 'Madero Tango', 'Frontend Development using HTML, SASS & JavaScript.')
     +caja('https://materadiego.github.io/cocinas-marketplace/', 'cocinas-m.png', 'Marketplace C.Ocultas', 'Frontend Development using HTML, SASS & JavaScript.')
     +caja('https://www.cocinasocultas.com.uy/', 'cocinas.png', 'Cocinas Ocultas', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
     +caja('https://www.cascanuecesarg.com', 'cascanueces.png', 'Cascanueces', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
-    +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
+    //- +caja('https://www.pinkinton.com/', 'pinkinton.png', 'Pinkinton', 'Frontend Development using HTML, CSS, JavaScript & PHP.')
   h4#projects PROJECTS
   .portfolio--proyectos.swiper.mySwiper.mob
     .swiper-wrapper
