@@ -1030,9 +1030,9 @@ h4 {
       .sobre-mi .skills {
         padding-left: 0;
         width: 100%;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start; } }
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
     @media only screen and (min-width: 1200px) {
       .sobre-mi .skills {
         width: 750px;
@@ -1057,10 +1057,9 @@ h4 {
       @media only screen and (min-width: 992px) {
         .sobre-mi .skills--cont {
           width: 440px;
-          width: 100%;
+          width: 80%;
           margin: 0;
-          padding: 0;
-          width: 290px; } }
+          padding: 0; } }
       @media only screen and (min-width: 1200px) {
         .sobre-mi .skills--cont {
           width: 320px;
@@ -1134,6 +1133,9 @@ h4 {
           text-align: center;
           -webkit-box-shadow: 0 2px 15px 2px black;
           box-shadow: 0 2px 15px 2px black; }
+          @media only screen and (min-width: 992px) {
+            .sobre-mi .skills--cont--ul li {
+              margin: 15px 20px 10px; } }
           .sobre-mi .skills--cont--ul li figure {
             width: 100px;
             height: 100px;
@@ -1149,6 +1151,10 @@ h4 {
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             justify-content: center;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            will-change: transform;
             -webkit-box-shadow: inset 0 0 15px 0 #3dc1d3;
             box-shadow: inset 0 0 15px 0 #3dc1d3; }
             .sobre-mi .skills--cont--ul li figure img {
@@ -1160,24 +1166,19 @@ h4 {
             font-size: 14px;
             margin-top: 10px;
             margin-bottom: 0; }
-          @media only screen and (min-width: 380px) {
-            .sobre-mi .skills--cont--ul li {
-              font-size: 16px; } }
-          @media only screen and (min-width: 992px) {
-            .sobre-mi .skills--cont--ul li {
-              padding: 5px 40px;
-              font-size: 16px;
-              -webkit-transition: 0.3s;
-              -o-transition: 0.3s;
-              transition: 0.3s;
-              width: 30%;
-              cursor: default; } }
-          @media only screen and (min-width: 992px) {
-            .sobre-mi .skills--cont--ul li:hover {
-              color: #3dc1d3; } }
-      @media only screen and (min-width: 992px) {
-        .sobre-mi .skills--cont:hover .skills--cont--title h4 {
-          color: #3dc1d3; } }
+            @media only screen and (min-width: 992px) {
+              .sobre-mi .skills--cont--ul li p {
+                cursor: default;
+                text-align: center;
+                padding: 0; } }
+    @media only screen and (min-width: 992px) {
+      .sobre-mi .skills:hover .skills--cont--title h4 {
+        color: #3dc1d3; } }
+
+li:hover figure {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
 
 .portfolio {
   width: 100%;

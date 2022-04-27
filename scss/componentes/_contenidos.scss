@@ -57,7 +57,7 @@
     @include media(desktop-s) {
       padding-left: 0;
       width: 100%;
-      justify-content: flex-start;
+      justify-content: center;
     }
     @include media(desktop-m) {
       width: 750px;
@@ -78,10 +78,9 @@
       }
       @include media(desktop-s) {
         width: 440px;
-        width: 100%;
+        width: 80%;
         margin: 0;
         padding: 0;
-        width: 290px;
       }
       @include media(desktop-m) {
         width: 320px;
@@ -134,8 +133,11 @@
           align-items: center;
           justify-content: flex-start;
           text-align: center;
-          box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 1);
 
+          box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 1);
+          @include media(desktop-s) {
+            margin: 15px 20px 10px;
+          }
           & figure {
             width: 100px;
             height: 100px;
@@ -145,6 +147,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: 0.5s;
+            will-change: transform;
             box-shadow: inset 0 0 15px 0 $color-variacion2;
             & img {
               width: 55%;
@@ -158,31 +162,40 @@
             font-size: 14px;
             margin-top: 10px;
             margin-bottom: 0;
-          }
-          @include media(mobile-l) {
-            font-size: 16px;
-          }
-          @include media(desktop-s) {
-            padding: 5px 40px;
-            font-size: 16px;
-            transition: 0.3s;
-            width: 30%;
-            cursor: default;
-          }
-          &:hover {
             @include media(desktop-s) {
-              color: $color-variacion2;
+              cursor: default;
+              text-align: center;
+              padding: 0;
             }
           }
-        }
-      }
-      &:hover .skills--cont--title h4 {
-        @include media(desktop-s) {
-          color: $color-variacion2;
+          // @include media(mobile-l) {
+          //   font-size: 16px;
+          // }
+          // @include media(desktop-s) {
+          //   padding: 5px 40px;
+          //   font-size: 16px;
+          //   transition: 0.3s;
+          //   width: 30%;
+          //   cursor: default;
+          // }
         }
       }
     }
+    &:hover .skills--cont--title h4 {
+      @include media(desktop-s) {
+        color: $color-variacion2;
+      }
+    }
   }
+}
+
+li:hover {
+  @include media(desktop-s) {
+  }
+}
+
+li:hover figure {
+  transform: scale(1.1);
 }
 
 .portfolio {
