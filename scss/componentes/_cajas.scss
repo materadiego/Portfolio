@@ -51,14 +51,20 @@
       margin: 10px 0px 10px;
       justify-content: center;
       transition: 0.4s;
-      border-top: 2px solid $color-secundario;
-      border-bottom: 2px solid $color-secundario;
+      color: $color-variacion2;
+      border-top: 2px solid $color-variacion2;
+      border-bottom: 2px solid $color-variacion2;
       @include shadow;
       @include media(mobile-l) {
         font-size: 24px;
       }
       @include media(mobile-xl) {
         font-size: 26px;
+      }
+      @include media(desktop-s) {
+        border-top: 2px solid $color-secundario;
+        border-bottom: 2px solid $color-secundario;
+        color: $color-claro;
       }
     }
     & p {

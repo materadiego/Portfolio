@@ -1030,9 +1030,9 @@ h4 {
       .sobre-mi .skills {
         padding-left: 0;
         width: 100%;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly; } }
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start; } }
     @media only screen and (min-width: 1200px) {
       .sobre-mi .skills {
         width: 750px;
@@ -1057,12 +1057,14 @@ h4 {
       @media only screen and (min-width: 992px) {
         .sobre-mi .skills--cont {
           width: 440px;
+          width: 100%;
           margin: 0;
           padding: 0;
           width: 290px; } }
       @media only screen and (min-width: 1200px) {
         .sobre-mi .skills--cont {
-          width: 320px; } }
+          width: 320px;
+          width: 100%; } }
       .sobre-mi .skills--cont--title {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1084,7 +1086,10 @@ h4 {
         @media only screen and (min-width: 992px) {
           .sobre-mi .skills--cont--title {
             padding: 15px 40px;
-            margin-bottom: 0; } }
+            margin-bottom: 0;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: flex-start; } }
         .sobre-mi .skills--cont--title h4 {
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
@@ -1096,24 +1101,65 @@ h4 {
           position: absolute;
           right: 15px; }
       .sobre-mi .skills--cont--ul {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         padding: 0; }
         .sobre-mi .skills--cont--ul li {
-          font-size: 14px;
           font-weight: 500;
           list-style: none;
-          width: 100%;
-          margin: 7px 0;
+          width: 90px;
+          border-radius: 60px;
+          height: 180px;
+          margin: 7px 10px;
           line-height: 130%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
           text-align: center;
-          color: #ddd;
-          font-family: "Cairo", sans-serif; }
+          -webkit-box-shadow: 0 2px 15px 2px black;
+          box-shadow: 0 2px 15px 2px black; }
+          .sobre-mi .skills--cont--ul li figure {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border-radius: 200px;
+            margin-bottom: 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-shadow: inset 0 0 15px 0 #3dc1d3;
+            box-shadow: inset 0 0 15px 0 #3dc1d3; }
+            .sobre-mi .skills--cont--ul li figure img {
+              width: 55%;
+              margin: 0 auto; }
+          .sobre-mi .skills--cont--ul li p {
+            color: #ddd;
+            font-family: "Cairo", sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 0; }
           @media only screen and (min-width: 380px) {
             .sobre-mi .skills--cont--ul li {
               font-size: 16px; } }
@@ -1124,6 +1170,7 @@ h4 {
               -webkit-transition: 0.3s;
               -o-transition: 0.3s;
               transition: 0.3s;
+              width: 30%;
               cursor: default; } }
           @media only screen and (min-width: 992px) {
             .sobre-mi .skills--cont--ul li:hover {
@@ -1229,7 +1276,7 @@ h4 {
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  color: #3dc1d3; }
+  color: #ddd; }
 
 .swiper-button-next {
   -webkit-transform: scale(0.6);
@@ -1238,7 +1285,10 @@ h4 {
 
 .ul-front,
 .ul-a-l {
-  display: none; }
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .title-f {
   color: #574b90; }
@@ -1254,18 +1304,31 @@ h4 {
 .skills--cont {
   border: 3px solid #222; }
 
-.ul-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.flecha-is-active {
-  -webkit-transform: rotateZ(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotateZ(-180deg); }
-
 .title-is-active {
   color: #3dc1d3; }
+
+.logo-responsive {
+  width: 50%;
+  max-width: 350px;
+  border-radius: 500px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.55); }
+
+.logo-responsive-figure {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media only screen and (min-width: 992px) {
+    .logo-responsive-figure {
+      display: none; } }
 
 .caja__link {
   display: -webkit-box;
@@ -1342,8 +1405,9 @@ h4 {
       -webkit-transition: 0.4s;
       -o-transition: 0.4s;
       transition: 0.4s;
-      border-top: 2px solid #333;
-      border-bottom: 2px solid #333;
+      color: #3dc1d3;
+      border-top: 2px solid #3dc1d3;
+      border-bottom: 2px solid #3dc1d3;
       -webkit-box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.55);
       box-shadow: 0px 2px 15px 8px rgba(0, 0, 0, 0.55); }
       @media only screen and (min-width: 380px) {
@@ -1352,6 +1416,11 @@ h4 {
       @media only screen and (min-width: 480px) {
         .caja__link .caja__contenido h5 {
           font-size: 26px; } }
+      @media only screen and (min-width: 992px) {
+        .caja__link .caja__contenido h5 {
+          border-top: 2px solid #333;
+          border-bottom: 2px solid #333;
+          color: #ddd; } }
     .caja__link .caja__contenido p {
       width: 80%;
       height: 40px;
