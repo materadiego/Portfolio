@@ -33,7 +33,9 @@
     justify-content: center;
     align-items: center;
     background-color: $color-variacion;
+
     @include shadow-inner;
+
     @include media(mobile-l) {
       height: 280px;
     }

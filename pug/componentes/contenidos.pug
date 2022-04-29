@@ -1,15 +1,22 @@
 .menu-but.mob#menu-but 
   img(src="../images/Responsive-menu.png", alt="")
 section.sobre-mi
-  h3#about-me About Me
+  #about-me 
+    figure.icon.icon_blue 
+      img.icon-about-me(src="../images/about-me_icon.png", alt="icon")
+    h3 About Me
+    
   figure.logo-responsive-figure
     img.logo-responsive(src="../images/avatar2.png", alt="")
-  p  Born in Buenos Aires, Argentina in the early 90's. I've always been a proactive guy, constantly learning an improving my skills.
+  p  Born in Buenos Aires, Argentina in the early 90's. I've always been a proactive guy, constantly learning and improving my skills.
   p  I've been working as an Audio & Lighting technician for a decade, particulary with DMX lighting shows (using Avolites interface).
   p  Working with DMX programming made me very interested in learning about different programming languages, so I started studying Web Design (Frontend Development) & I am actually working as a freelancer.
   p  I'm working on getting my certification as Fullstack Javascript Developer. Some of my other interests are AWS, Cibersecurity & Software Development 
-  
-  h3 Skills 
+  .skills-title-cont
+    figure.skills-icon
+      img.icon-skills(src="../images/skills_icon.png", alt="icon")
+    h3 Skills 
+    
   .skills 
     .skills--cont#skills-front
       .skills--cont--title#title-f
@@ -51,7 +58,7 @@ section.sobre-mi
         li  
           figure
             img(src="../images/react.png", alt="")
-          p React.JS (In course)
+          p React.JS 
         li  
           figure
             img(src="../images/ps.png", alt="")

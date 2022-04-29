@@ -16,14 +16,65 @@
     padding: 0px 0 45px;
     margin: 25px auto 0;
   }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 5%;
+    @include media(desktop-s) {
+      left: 0;
+      position: static;
+    }
+    & img {
+      width: 80%;
+    }
+  }
+
+  .icon_blue {
+    box-shadow: inset 0 0 6px 0 $color-variacion2;
+  }
+
+  .skills-icon {
+    width: 60px;
+    height: 60px;
+    left: 5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 500px;
+    margin-bottom: 0;
+    box-shadow: inset 0 0 6px 0 $color-variacion2;
+    @include media(desktop-s) {
+      left: 0;
+      position: static;
+    }
+    & img {
+      width: 65%;
+    }
+  }
+
   #about-me {
     margin: 15px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     border-top: 2px solid $color-secundario;
     border-bottom: 2px solid $color-secundario;
+
     @include shadow-inner;
 
     @include media(desktop-s) {
       padding: 15px 0 15px 70px;
+      justify-content: flex-start;
     }
   }
   p {
@@ -95,6 +146,7 @@
         padding: 5px 0;
         position: relative;
         cursor: pointer;
+
         border-bottom: 2px solid $color-secundario;
         @include shadow-inner;
         @include media(desktop-s) {
@@ -162,6 +214,10 @@
             font-size: 14px;
             margin-top: 10px;
             margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
             @include media(desktop-s) {
               cursor: default;
               text-align: center;
@@ -186,6 +242,18 @@
         color: $color-variacion2;
       }
     }
+  }
+}
+
+.skills-title-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 60px;
+  @include media(desktop-s) {
+    justify-content: flex-start;
+    padding-left: 70px;
   }
 }
 
@@ -317,18 +385,23 @@ li:hover figure {
 }
 
 .logo-responsive {
-  width: 50%;
+  width: 80%;
   max-width: 350px;
   border-radius: 500px;
   margin: 0 auto;
-  @include shadow;
 }
 
 .logo-responsive-figure {
-  width: 100%;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 500px;
+
+  @include shadow-inner;
+
   //border: 2px solid red;
   @include media(desktop-s) {
     display: none;
